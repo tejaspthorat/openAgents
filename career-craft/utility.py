@@ -1,8 +1,9 @@
 import json
 import re
 from openai import OpenAI
+import os
 
-TOGETHER_API_KEY = "2de5914d7616611fbe6d39da07c8106e3cade24d2538f8fc774c7ee08c0f0b86"
+TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 
 client = OpenAI(
   api_key=TOGETHER_API_KEY,
